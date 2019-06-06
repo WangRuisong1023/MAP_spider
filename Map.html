@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="./css/demo-center.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="./js/demoutils.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=0811073ca1503498b3ddf02e95ea1752&plugin=AMap.Driving"></script>  
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <title>地图加载完成</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="info">
+        <h4>获取地图级别与中心点坐标</h4>
+        <p>当前级别：<span id="map-zoom">11</span></p>
+        <p>当前中心点：<span id="map-center">121.498586,31.239637</span></p>
+    </div>
+
+    <div class="input-card">
+        <h4>左击获取经纬度：</h4>
+        <div class="input-item">
+            <input type="text" readonly="true" id="lnglat">
+        </div>
+        <h4>设置地图当前行政区</h4>
+        <div class="input-item">
+            <input id="city-name" placeholder="北京市" type="text">
+            <button class="btn" id="query">去指定城市</button>
+        </div>
+        <h4><button id="trans-map" class="btn">一键翻转</button></h4>
+        <h4><button id="plan-road" class="btn">路径规划</button></h4>
+        
+    </div>
+    <div id="panel"></div>
+
+
+
+    
+   
+    <script src="./js/map.js"></script>
+    <script src="./file/employee.json?callback=train"></script>
+    
+    
+</body>
+
+</html>
